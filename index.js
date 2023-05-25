@@ -13,6 +13,13 @@ app.get('/model', function(req,res){
     res.status(500).send('DATA_JSON_URL environment variable not set.');
   }
 })
+
+app.get('/', function(req,res){
+    res.json({
+        message : 'Hello',
+        status : 200
+    })
+});
 app.listen(
     port, 
     function(){
